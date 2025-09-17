@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="detail">
+        <img class="menubar" src="/images/icon-menu.svg" alt="">
+        <img
+          src="/images/logo.svg"
+          alt="sneakers"
+          height="20px"
+          width="150px"
+        />
+        <span class="menu1"> Collections</span>
+        <span class="menu2">Men</span>
+        <span class="menu3">Women</span>
+        <span class="menu4">About</span>
+        <span class="menu5">Contact</span>
+      </div>
+      <div class="logo">
+        <div class="cart-container">
+  <img src="/images/icon-cart.svg" alt="Cart" class="cart-icon" >
+  <span class="cart-badge">2</span>
+  <!-- Cart Dropdown -->
+  <div class="cart-dropdown">
+    <h4>Cart</h4>
+    <div class="line1"></div>
+    <p>Your cart is empty.</p>
+  </div>
+</div>    
+        <img
+          src="/images/image-avatar.png"
+          alt="avatar"
+          height="50px"
+          width="50px"
+        />
+      </div>
+      
+    </header>
+    <div class="line"></div>
+    <div class="mainmodal">
+       <div class="modal">
+        <img class="modal1" src="/images/image-product-1.jpg" alt="" height="400px" width="400px">
+      <img class="modal2" src="/images/image-product-2.jpg" alt="" height="400px" width="400px">
+      <img class="modal3" src="/images/image-product-3.jpg" alt="" height="400px" width="400px">
+      <img class="modal4" src="/images/image-product-4.jpg" alt="" height="400px" width="400px">
+       </div>
+    </div>
+    <main>
+      <div class="photos">
+        <img
+          class="imgmain1"
+          src="/images/image-product-1.jpg"
+          alt=""
+          height="400px"
+          width="412px"
+        />
+        <img
+          class="imgmain2"
+          src="/images/image-product-2.jpg"
+          alt=""
+          height="400px"
+          width="412px"
+        /><img
+          class="imgmain3"
+          src="/images/image-product-3.jpg"
+          alt=""
+          height="400px"
+          width="412px"
+        /><img
+          class="imgmain4"
+          src="/images/image-product-4.jpg"
+          alt=""
+          height="400px"
+          width="412px"
+        />
+        <div class="minimg">
+          <img
+            class="img1" onclick="thumbnail1()"
+            src="/images/image-product-1-thumbnail.jpg"
+            alt=""
+            height="100px"
+            width="100px"
+          />
+          <!-- <div class="container"></div> -->
+          <img
+            class="img2"
+            src="/images/image-product-2-thumbnail.jpg"
+            alt=""
+            height="100px"
+            width="100px"
+          />
+          <img
+            class="img3"
+            src="/images/image-product-3-thumbnail.jpg"
+            alt=""
+            height="100px"
+            width="100px"
+          />
+          <img
+            class="img4"
+            src="/images/image-product-4-thumbnail.jpg"
+            alt=""
+            height="100px"
+            width="100px"
+          />
+        </div>
+      </div>
+      <div class="content">
+        <div class="company">
+          <h3>Sneaker Company</h3>
+          <h1>Fall Limited Edition <br> Sneakers</h1>
+        </div>
+
+        <p>
+          These low-profile sneakers are your perfect casual wear <br> companion.
+          Featuring a durable rubber outer sole, they’ll <br>withstand everything
+          the weather can offer.
+        </p>
+            <div class="amount">
+              <div class="price">
+          <h2 >$125.00</h2>
+          <p>50%</p>
+          </div>
+          <div class="discount">
+            <h5 class="offer">$250.00</h5>
+          </div>
+          
+        
+            </div>
+
+        
+
+        
+        <div class="incre">
+          <div class="count">
+            <img class="minus"
+              src="/images/icon-minus.svg"
+              alt=""
+            />
+            <h4 class="counter">0</h4>
+            <img class="plus"
+              src="/images/icon-plus.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="cartbtn">
+            <button>
+              <img class="cart1"
+                src="/images/icon-cart.svg"
+                alt="" height="15px" width="15px"
+              />
+              Add to cart
+            </button>
+          </div>
+          <div id="cartDetails" style="display: none;">
+  <p>Item added to cart!</p>
+</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

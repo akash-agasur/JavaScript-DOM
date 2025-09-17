@@ -1,0 +1,10 @@
+.people-counter{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: crimson;
+}
+.people-counter button{
+    height: 35px;
+}
