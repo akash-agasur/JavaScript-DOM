@@ -68,6 +68,7 @@ header  {
   font-size: 12px;
   font-weight: bold;
   line-height: 1;
+  display: none;
   
 }
 .cart-dropdown {
@@ -78,8 +79,8 @@ header  {
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  height: 300px;
-  width: 250px;
+  height: 200px;
+  width: 270px;
   z-index: 1000; 
 }
 .cart-dropdown .line1{

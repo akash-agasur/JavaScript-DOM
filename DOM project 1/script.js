@@ -20,8 +20,7 @@ let menu2 = document.querySelector(".menu2");
 let menu3 = document.querySelector(".menu3");
 let menu4 = document.querySelector(".menu4");
 let menu5 = document.querySelector(".menu5");
-
-
+let cartbadge = document.querySelector(".cart-badge")
 
 
 
@@ -33,7 +32,7 @@ minus.addEventListener("click", () => {
   }
 });
 plus.addEventListener("click", () => {
-  count++;
+  count+1;
   counter.innerHTML = count;
 });
 
@@ -51,32 +50,65 @@ document.addEventListener("click", (e) => {
   }
 });
 
+
+
+
+                          // -----------------carte-badge------------
+// Update the badge display and value
+function updateCartBadge() {
+  if (count > 0) {
+    cartbadge.style.display = "inline-block";
+    cartbadge.innerText = count;
+  } else {
+    cartbadge.style.display = "none";
+  }
+}
+
+minus.addEventListener("click", () => {
+  if (count > 0) {
+    count--;
+    counter.innerHTML = count;
+    updateCartBadge();
+  }
+});
+
+plus.addEventListener("click", () => {
+  count++;
+  counter.innerHTML = count;
+  updateCartBadge();
+});
+
+
+                                        // ---------------------cartbtn----------
 let cartbtn = document.querySelector(".cartbtn");
 let shoe = document.querySelector(".imgmain");
 // let cartDropdown = document.querySelector(".cartDropdown");
 
+
 let product = {
   name: "Fall Limited Edition Sneakers",
   price: 125,
-  quantity:0,
+  quantity:count,
 };
 
 cartbtn.addEventListener("click", function () {
   console.log("click");
-
-  cartDropdown.style.display = "block";
-  cartDropdown;
-  cartDropdown.innerHTML = `
-
-        <p class="fall"><strong>${product.name}</strong></p>
-        
-       <p>$${product.price} x ${product.quantity} = <strong>$${
-    product.price * product.quantity
-  }</strong></p>
-       <button class="check" onclick="checkout()">Checkout</button>
-       
-     `;
+  product.quantity = count;
+  if (product.quantity > 0) {
+    cartDropdown.style.display = "block";
+    cartDropdown.innerHTML = `
+      <p class="fall"><strong>${product.name}</strong></p>
+      <p>$${product.price} x ${product.quantity} = <strong>$${
+      product.price * product.quantity
+    }</strong></p>
+      <button class="check" onclick="checkout()">Checkout</button>
+    `;
+  } else {
+    cartDropdown.innerHTML = `<p>Your cart is empty.</p>`;
+  }
 });
+
+document.getElementById(cartDropdown).style.backgroundColor="yellow",
 
 miniImage1.addEventListener("click", () => {
   mainImage1.style.display = "block";
